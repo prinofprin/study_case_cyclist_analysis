@@ -11,9 +11,6 @@ output:
   html_document: default
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 #### Note
 This study case is my analysis for Google Data Analytics Professional Certificate Course's study case, please read the study case question [here](C:/Users/ADMIN/Desktop/Prin/Google Data Analysis/Lesson 8 Capstone Complete a Case Study/cyclistic_study_case.pdf)
 
