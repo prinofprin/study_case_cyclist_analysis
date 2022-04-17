@@ -1,19 +1,7 @@
-# Study-Case-Cyclist-Analysis-
-My study case analysis for Google Certificate Course
-
----
-title: "Case Study: Use the Bike-Sharing company's historical data to find customer's insight"
-      
-author: "Thanawat Riencharoen"
-date: '2022-04-04'
-output:
-  pdf_document: default
-  html_document: default
----
-
+# Case Study: Use the Bike-Sharing company's historical data to find customer's insight
 #### Note
-This study case is my analysis for Google Data Analytics Professional Certificate Course's study case, please read the study case question [here](C:/Users/ADMIN/Desktop/Prin/Google Data Analysis/Lesson 8 Capstone Complete a Case Study/cyclistic_study_case.pdf)
-
+This study case is my analysis for Google Data Analytics Professional Certificate Course's study case, 
+please read the study case question in pdf files above.
 
 ## Business Task
 Use Cyclistic's historical bike trip data to analyze the different behavior between annual members and causal riders and use the information to recommend the new marketing strategies to convert causal riders to annual members.
