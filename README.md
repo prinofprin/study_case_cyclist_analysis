@@ -67,6 +67,7 @@ I start analyzing the hours first to see the difference between the time causal 
 ```{r, echo=TRUE,}
 ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = started_hour)) + facet_wrap(~member_type)
 ```
+<img src='https://i.postimg.cc/0QVs2xVP/start-hour-graph.png' border='0' alt='start-hour-graph'/></a>
 
 As you see, there is a significant difference in the time both types of users use the bike. Causal riders use the bike lowest at 4 pm and peak at 5 pm, however, annual members have a small peak at 8 am and then gradually increase to the peak usage after work at 5 pm.
 
