@@ -1,8 +1,10 @@
 # Case Study: Use the Bike-Sharing company's historical data to find customer's insight
 #### Note
 This study case is my analysis for Google Data Analytics Professional Certificate Course's study case, 
-- Please read the study case question in cyclistic_study_case.pdf above.
-- To see the executed code graph, please read in Cyclist-study-case.pdf above.  
+- Please read the study case question [here]().
+- See the R code for the project [here]().
+- see the pdf report [here]().
+
 
 ## Business Task
 Use Cyclistic's historical bike trip data to analyze the different behavior between annual members and causal riders and use the information to recommend the new marketing strategies to convert causal riders to annual members.
@@ -22,6 +24,7 @@ First, I load all the data inside a new folder, installed the necessary packages
 library(tidyverse)
 library(lubridate)
 library(ggplot2)
+library(scales)
 library(dplyr)
 
 trip_data_2022_01 <- read.csv("C:/Users/ADMIN/Desktop/Prin/Google Data Analysis/Lesson 8 Capstone Complete a Case Study/Study Case How Does a Bike-Share Navigate Speedy data/202101-divvy-tripdata.csv")
@@ -104,12 +107,15 @@ ggplot(data = trip_data_process) + geom_point(mapping = aes(x = member_type, y =
 
 ```
 
+[![member-type-duration-graph.png](https://i.postimg.cc/G3ZGrSpT/member-type-duration-graph.png)](https://postimg.cc/RqLNLdKv)
+
 The annual members cycle more but shorter duration, while causal riders cycle less often but usually cycle for longer.
 
-Then I Create a bar graph to see which bike type is the most use for each member type.
+Then I Create a bar graph to see which bike type is use the most for each member type.
 ```{r, echo=TRUE,}
-ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = rideable_type, fill = member_type))
+ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = rideable_type, fill = member_type)) + scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
 ```
+[![popularity-graph.png](https://i.postimg.cc/T14JVRjR/popularity-graph.png)](https://postimg.cc/4HpcZRFM)
 
 The most popular type of bike for both groups is the classic bike, and the annual members rarely use the docked bike.
 
@@ -128,7 +134,7 @@ top_location_summary <- trip_data_process %>%
 ```
   
 ## Shere
-#### Key insight to share and visualize
+#### Key insight to share
 - Annual members usually use the bike to commute to work, while causal riders use the bike for much longer activities.
 
 #### additional useful information
@@ -142,7 +148,7 @@ top_location_summary <- trip_data_process %>%
 
 5. Clark St & Elm St is the most popular start cycling location for the annual members.
 
-See my PowerPoint prsentation [here]("www.github.com/prinofprin/ADMIN/Desktop/Prin/presentation.ppt")
+#### See my PowerPoint prsentation [here]("www.github.com/prinofprin/ADMIN/Desktop/Prin/presentation.ppt")
 
 ## Act
 my recommended strategies to convert causal riders to Annual members are.
