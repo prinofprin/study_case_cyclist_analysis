@@ -1,6 +1,5 @@
 # Case Study: Use the Bike-Sharing company's historical data to find customer's insight
-#### Note
-This study case is my analysis for Google Data Analytics Professional Certificate Course's study case, 
+This is my analysis for Google Data Analytics Professional Certificate Course's study case, 
 - Please read the study case question [here]().
 - See the R code for the project [here]().
 - see the pdf report [here]().
@@ -115,7 +114,7 @@ Then I Create a bar graph to see which bike type is use the most for each member
 ```{r, echo=TRUE,}
 ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = rideable_type, fill = member_type)) + scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
 ```
-[![popularity-graph.png](https://i.postimg.cc/zBf2ZDjr/popularity-graph.png)](https://postimg.cc/Lqr3jpwC)
+[![popularity-graph.png](https://i.postimg.cc/pTwq4fcw/popularity-graph.png)](https://postimg.cc/LYVtZ1pD)
 
 The most popular type of bike for both groups is the classic bike, and the annual members rarely use the docked bike.
 
