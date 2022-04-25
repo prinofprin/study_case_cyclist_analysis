@@ -65,7 +65,7 @@ trip_data_process <- mutate(trip_data_process, started_hour=format((ymd_hms(star
 ## Analyze
 I start analyzing the hours first to see the difference between the time causal riders and annual members using the bike.
 ```{r, echo=TRUE,}
-ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = started_hour)) + facet_wrap(~member_type)
+ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = started_hour)) + facet_wrap(~member_type) + scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
 ```
 <img src='https://i.postimg.cc/0QVs2xVP/start-hour-graph.png' border='0' alt='start-hour-graph'/></a>
 
@@ -73,8 +73,9 @@ As you see, there is a significant difference in the time both types of users us
 
 I investigate further by create the bar graphs comparing the difference both groups using during the day of work.
 ```{r, echo=TRUE,}
-ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = day)) + facet_wrap(~member_type)
+ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = day)) + facet_wrap(~member_type) + scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
 ```
+[![day-graph.png](https://i.postimg.cc/qq5sXhvq/day-graph.png)](https://postimg.cc/8fLfTCWg)
 
 While annual members use bike usage almost the same amount everyday, casual rider's usage is highest on Saturday and Sunday
 
@@ -87,8 +88,9 @@ work_duration_summary <- trip_data_process %>%
   group_by(member_type) %>%
   filter(started_hour == 8 | 17) %>%
   summarise(mean(duration))
-
 ```
+
+[![duration-summary.png](https://i.postimg.cc/rpT8gqsN/duration-summary.png)](https://postimg.cc/18Wh3hp8)
 
 The avenge duration that annual members ride to work is 13 min or calculate to roughly 3.5 km. in cycling distance.
 
