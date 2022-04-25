@@ -2,7 +2,7 @@
 This is my analysis for Google Data Analytics Professional Certificate Course's study case, 
 - Please read the study case question [here](https://github.com/prinofprin/study_case_cyclist_analysis/blob/main/cyclistic_study_case_question.pdf).
 - See the R code for this project [here](https://github.com/prinofprin/study_case_cyclist_analysis/blob/main/case_analysis_code.R).
-- see the pdf report [here](https://github.com/prinofprin/study_case_cyclist_analysis/blob/main/Cyclist-study-case.pdf).
+- see in the pdf format [here](https://github.com/prinofprin/study_case_cyclist_analysis/blob/main/Cyclist-study-case.pdf).
 
 
 ## Business Task
