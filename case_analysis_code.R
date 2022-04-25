@@ -3,6 +3,7 @@
 library(tidyverse)
 library(lubridate)
 library(ggplot2)
+library(scales)
 library(dplyr)
 
 trip_data_2022_01 <- read.csv("C:/Users/ADMIN/Desktop/Prin/Google Data Analysis/Lesson 8 Capstone Complete a Case Study/Study Case How Does a Bike-Share Navigate Speedy data/202101-divvy-tripdata.csv")
@@ -42,13 +43,12 @@ trip_data_process <- mutate(trip_data_process, day=weekdays(ymd_hms(started_at))
 # Add start hour column
 trip_data_process <- mutate(trip_data_process, started_hour=format((ymd_hms(started_at)), format = "%H"))
 
-
 ## Analyze
 # Plot start_hour 
-ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = started_hour)) + facet_wrap(~member_type)
+ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = started_hour)) + facet_wrap(~member_type) + scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
 
 # Plot day of the week 
-ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = day)) + facet_wrap(~member_type)
+ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = day)) + facet_wrap(~member_type) + scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
 
 # Summaries cycle duration for annual member during 8am and 5pm
 work_duration_summary <- trip_data_process %>%
@@ -63,7 +63,7 @@ work_duration_summary <- trip_data_process %>%
 ggplot(data = trip_data_process) + geom_point(mapping = aes(x = member_type, y = duration))
 
 # Plot bike type popularity
-ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = rideable_type, fill = member_type))
+ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = rideable_type, fill = member_type)) + scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
 
 # Plot location popularity
 top_location_summary <- trip_data_process %>%
