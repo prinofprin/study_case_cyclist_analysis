@@ -1,7 +1,7 @@
 # Case Study: Use the Bike-Sharing company's historical data to find customer's insight
 This is my analysis for Google Data Analytics Professional Certificate Course's study case, 
 - Please read the study case question [here]().
-- See the R code for the project [here]().
+- See the R code for this project [here]().
 - see the pdf report [here]().
 
 
