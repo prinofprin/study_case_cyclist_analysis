@@ -139,7 +139,7 @@ top_location_summary <- trip_data_process %>%
 
 5. Clark St & Elm St is the most popular start cycling location for the annual members.
 
-See my PowerPoint [here]("C:/Users/ADMIN/Desktop/Prin/Google Data Analysis/Lesson 8 Capstone Complete a Case Study/presentation.ppt")
+See my PowerPoint prsentation [here]("www.github.com/prinofprin/ADMIN/Desktop/Prin/presentation.ppt")
 
 ## Act
 my recommended strategies to convert causal riders to Annual members are.
