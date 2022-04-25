@@ -115,7 +115,7 @@ Then I Create a bar graph to see which bike type is use the most for each member
 ```{r, echo=TRUE,}
 ggplot(data = trip_data_process) + geom_bar(mapping = aes(x = rideable_type, fill = member_type)) + scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
 ```
-[![popularity-graph.png](https://i.postimg.cc/T14JVRjR/popularity-graph.png)](https://postimg.cc/4HpcZRFM)
+[![popularity-graph.png](https://i.postimg.cc/zBf2ZDjr/popularity-graph.png)](https://postimg.cc/Lqr3jpwC)
 
 The most popular type of bike for both groups is the classic bike, and the annual members rarely use the docked bike.
 
@@ -129,9 +129,9 @@ top_location_summary <- trip_data_process %>%
   summarise(count = n()) %>%
   top_n(n = 10, wt = count) %>%
   arrange(desc(count))
-
   ggplot(data = top_location_summary) + geom_bar(stat='identity', mapping = aes(x =    start_station_name, y = count))
 ```
+[![popular-station-graph.png](https://i.postimg.cc/NM16z3hc/popular-station-graph.png)](https://postimg.cc/yg83JrYQ)
   
 ## Shere
 #### Key insight to share
